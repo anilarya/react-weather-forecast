@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg-weather {
+  background-image: url('https://images.newscientist.com/wp-content/uploads/2023/10/31150615/sei178136481-2.jpg?crop=4:3,smart&width=1200&height=900&upscale=true');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.loader {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #3498db;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

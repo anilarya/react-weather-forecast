@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useContext } from 'react';
+import { WeatherContext } from './context/WeatherContext';
+import Search from './components/Search';
+import WeatherDetails from './components/WeatherDetails';
+import Header from './components/Header';
+import Loader from './components/Loader';
+import Footer from './components/Footer';
+import './styles/index.css'; // Ensure this import is present if it's not already
 
-function App() {
+const App = () => {
+  const { getWeatherDetails, loading } = useContext(WeatherContext);
+
+  useEffect(() => {
+    getWeatherDetails();
+  }, [getWeatherDetails]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen flex flex-col items-center bg-weather">
+      <Header />
+      <div className="w-full p-4">
+        <Search />
+        {loading ? <Loader /> : <WeatherDetails />}
+      </div>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
