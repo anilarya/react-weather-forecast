@@ -7,7 +7,7 @@ const Footer = () => {
         <p className="mb-2">Weather Forecast App © 2024</p>
         <p className="mb-2">Licensed under the MIT License</p>
         <a
-          href="https://github.com/your-github-repo"
+          href="https://github.com/anilarya/react-weather-forecast"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white underline"

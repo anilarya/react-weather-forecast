@@ -38,11 +38,11 @@ const WeatherDetails = () => {
   return (
     <div className="container mx-auto my-4 p-4">
       {errorMessage && <div className="alert alert-danger"><strong>Oops!</strong> {errorMessage}</div>}
-      {weatherDetails.city && <h2 className="text-2xl font-bold mb-4 text-center">{weatherDetails.city.name}, {weatherDetails.city.country}</h2>}
+      {weatherDetails.city && <h2 className="text-2xl text-white font-bold mb-4 text-center">{weatherDetails.city.name}, {weatherDetails.city.country}</h2>}
       {Object.keys(groupedByDate).length > 0 ? (
         Object.keys(groupedByDate).map((date) => (
           <div key={date} className="mb-8">
-            <h3 className="text-xl font-bold mb-4">{date}</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">{date}</h3>
             <div className="flex flex-wrap -mx-2">
               {groupedByDate[date].map((detail, index) => (
                 <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">

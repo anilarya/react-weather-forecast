@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg-weather {
-    background-image:linear-gradient(to right, #f20dea, #07b9ef);
+    background-image:linear-gradient(to right, #f64c03, #344df3);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
